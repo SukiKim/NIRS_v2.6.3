@@ -998,8 +998,8 @@ define("login/login/controller", ["exports", "jquery", "ui/utils/constants"], fu
           if (Ember.get(this, 'app.environment') === 'development') {
             Ember.get(this, 'router').replaceWith('authenticated');
           } else {
-            let link = '/dashboard';
-            window.location.href = link;
+            Ember.get(this, 'router').replaceWith('authenticated'); // window.location.href = link;
+
             return;
           }
         }

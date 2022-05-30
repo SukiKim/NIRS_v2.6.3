@@ -6083,7 +6083,10 @@ input.input-lg,
         z-index: 1;
         flex-grow: 1;
         margin-block-start: 0px;
-        margin-block-end: 0px; }
+        margin-block-end: 0px;
+        width: 90%;
+        display: inline-block;
+        float: left; }
         .page-header-width NAV > ul.nav-main:hover .cluster_list {
           border-radius: 16px;
           outline: none;
@@ -6218,7 +6221,7 @@ input.input-lg,
     .page-header-width NAV .project_toggle {
       height: 100%;
       float: left;
-      max-width: 80%;
+      max-width: calc(100% - 215px);
       margin-left: 1%;
       padding-right: 1%;
       width: auto; }
@@ -6249,7 +6252,9 @@ input.input-lg,
         transform: rotateY(-180deg) translate(0, 125%);
         transition: 0.3s; }
         .page-header-width NAV .open_project_red:checked ~ .project_lists {
-          display: flex; }
+          display: inline-block !important;
+          max-width: 98%;
+          float: right; }
     .page-header-width NAV .project_lists {
       float: left;
       overflow-y: auto;
@@ -6314,7 +6319,9 @@ input.input-lg,
     border-radius: 0 3px 3px 0;
     margin: 0;
     position: relative;
-    z-index: 4; }
+    z-index: 4;
+    width: 10%;
+    display: inline-block; }
     .page-header-width .nav-user .ember-basic-dropdown-content {
       right: 15%;
       width: 500px;

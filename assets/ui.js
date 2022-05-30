@@ -518,8 +518,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "qLbvgfl7",
-    "block": "{\"symbols\":[],\"statements\":[[10,\"div\"],[14,1,\"underlay\"],[14,0,\"underlay hide\"],[12],[13],[2,\"\\n\"],[10,\"div\"],[14,1,\"loading-underlay\"],[14,0,\"underlay\"],[12],[13],[2,\"\\n\"],[10,\"div\"],[14,1,\"loading-overlay\"],[14,0,\"loading-overlay\"],[12],[2,\"\\n\"],[6,[37,1],[[35,0,[\"isRancher\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"    \"],[10,\"div\"],[14,0,\"square\"],[12],[2,\"\\n      \"],[10,\"div\"],[14,0,\"lid\"],[12],[2,\"\\n      \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"    \"],[10,\"div\"],[14,0,\"whiteboxloader\"],[12],[2,\"\\n      \"],[10,\"div\"],[14,0,\"loader-inner ball-clip-rotate-pulse\"],[12],[2,\"\\n        \"],[10,\"div\"],[12],[13],[2,\"\\n        \"],[10,\"div\"],[12],[13],[2,\"\\n      \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[13],[2,\"\\n\\n\"],[1,[30,[36,3],[[30,[36,2],[\"overlay\"],null]],null]],[2,\"\\n\"],[1,[30,[36,3],[[30,[36,2],[\"error\"],null]],null]],[2,\"\\n\\n\"],[6,[37,5],[[35,4]],null,[[\"default\"],[{\"statements\":[[8,\"settings-overridable-banner\",[[24,1,\"setting-ui-header-banner\"]],[[\"@show\",\"@model\"],[[34,0,[\"showHeaderBanner\"]],[34,0,[\"bannerContent\"]]]],null],[2,\"\\n\"]],\"parameters\":[]}]]],[10,\"div\"],[14,1,\"application\"],[15,0,[31,[\"container no-inline-space \",[30,[36,1],[[35,0,[\"showHeaderBanner\"]],\"with-ui-header-banner\",\"\"],null],\" \",[30,[36,1],[[35,0,[\"showFooterBanner\"]],\"with-ui-footer-banner\",\"\"],null]]]],[12],[2,\"\\n  \"],[1,[30,[36,3],[[30,[36,2],null,null]],null]],[2,\"\\n\"],[13],[2,\"\\n\"],[6,[37,5],[[35,4]],null,[[\"default\"],[{\"statements\":[[8,\"settings-overridable-banner\",[[24,1,\"setting-ui-footer-banner\"]],[[\"@show\",\"@model\"],[[34,0,[\"showFooterBanner\"]],[34,0,[\"bannerContent\"]]]],null],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"\\n\"],[1,[30,[36,3],[[35,7]],[[\"tooltipTemplate\",\"class\",\"id\",\"role\",\"aria-hidden\"],[[35,6],\"container-tooltip\",\"tooltip-base\",\"tooltip\",\"false\"]]]],[2,\"\\n\"],[1,[34,8]],[2,\"\\n\"]],\"hasEval\":false,\"upvars\":[\"settings\",\"if\",\"-outlet\",\"component\",\"isEmbedded\",\"unless\",\"tooltipTemplate\",\"tooltip\",\"modal-root\"]}",
+    "id": "nHuPJgX3",
+    "block": "{\"symbols\":[],\"statements\":[[10,\"div\"],[14,1,\"underlay\"],[14,0,\"underlay hide\"],[12],[13],[2,\"\\n\"],[10,\"div\"],[14,1,\"loading-underlay\"],[14,0,\"underlay\"],[12],[13],[2,\"\\n\"],[10,\"div\"],[14,1,\"loading-overlay\"],[14,0,\"loading-overlay\"],[12],[2,\"\\n\"],[6,[37,1],[[35,0,[\"isRancher\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"    \"],[10,\"div\"],[14,0,\"square\"],[12],[2,\"\\n      \"],[10,\"div\"],[14,0,\"lid\"],[12],[2,\"\\n      \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"    \"],[10,\"div\"],[14,0,\"whiteboxloader\"],[12],[2,\"\\n      \"],[10,\"div\"],[14,0,\"loader-inner ball-clip-rotate-pulse\"],[12],[2,\"\\n        \"],[10,\"div\"],[12],[13],[2,\"\\n        \"],[10,\"div\"],[12],[13],[2,\"\\n      \"],[13],[2,\"\\n    \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[13],[2,\"\\n\\n\"],[1,[30,[36,3],[[30,[36,2],[\"overlay\"],null]],null]],[2,\"\\n\"],[1,[30,[36,3],[[30,[36,2],[\"error\"],null]],null]],[2,\"\\n\\n\"],[10,\"div\"],[14,1,\"application\"],[15,0,[31,[\"container no-inline-space \",[30,[36,1],[[35,0,[\"showHeaderBanner\"]],\"with-ui-header-banner\",\"\"],null],\" \",[30,[36,1],[[35,0,[\"showFooterBanner\"]],\"with-ui-footer-banner\",\"\"],null]]]],[12],[2,\"\\n  \"],[1,[30,[36,3],[[30,[36,2],null,null]],null]],[2,\"\\n\"],[13],[2,\"\\n\"],[6,[37,5],[[35,4]],null,[[\"default\"],[{\"statements\":[[8,\"settings-overridable-banner\",[[24,1,\"setting-ui-footer-banner\"]],[[\"@show\",\"@model\"],[[34,0,[\"showFooterBanner\"]],[34,0,[\"bannerContent\"]]]],null],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"\\n\"],[1,[30,[36,3],[[35,7]],[[\"tooltipTemplate\",\"class\",\"id\",\"role\",\"aria-hidden\"],[[35,6],\"container-tooltip\",\"tooltip-base\",\"tooltip\",\"false\"]]]],[2,\"\\n\"],[1,[34,8]],[2,\"\\n\"]],\"hasEval\":false,\"upvars\":[\"settings\",\"if\",\"-outlet\",\"component\",\"isEmbedded\",\"unless\",\"tooltipTemplate\",\"tooltip\",\"modal-root\"]}",
     "moduleName": "ui/application/template.hbs"
   });
 
@@ -6150,11 +6150,10 @@
         // Send users to dashboard, if there's no redirect cookie, and not embedded
         // So that if you're on <2.6 in Ember, upgrade, and get reloaded you end up in Dashboard.
         this.cookies.set(_constants.default.COOKIE.REDIRECTED, true); // If isEmbedded then you're already in Dashboard, so just set the cookie.
-
-        if (!isEmbedded) {
-          window.location.href = Ember.get(this, 'scope.dashboardBase');
-          return;
-        }
+        // if ( !isEmbedded ) {
+        //   window.location.href = get(this, 'scope.dashboardBase');
+        //   return;
+        // }
       }
 
       if (Ember.get(this, 'settings.isRancher') && !isEmbedded) {
@@ -29079,7 +29078,7 @@
 
   _exports.default = _default;
 });
-;define("ui/components/page-header-height/component", ["exports", "ui/components/page-header-height/template", "shared/utils/constants", "shared/utils/navigation-tree", "jquery"], function (_exports, _template, _constants, _navigationTree, _jquery) {
+;define("ui/components/page-header-height/component", ["exports", "ui/components/page-header-height/template", "shared/utils/constants", "shared/utils/navigation-tree", "jquery", "ui/authenticated/cluster/storage/classes/index/controller"], function (_exports, _template, _constants, _navigationTree, _jquery, _controller) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -29172,6 +29171,45 @@
     actions: {
       clickDashboard() {
         window.location.href = Ember.get(this, "dashboardLink");
+      },
+
+      addremoveClass() {
+        if ((0, _jquery.default)('.nav-toggle').is(':checked')) {
+          // nav-toggle 눌렀을 때 크기 및 위치 변경
+          (0, _jquery.default)('.page-header-height').addClass('page-header-height-add');
+          (0, _jquery.default)('.page-header-height').removeClass('basic');
+          (0, _jquery.default)('.etc-class').addClass('acco-display');
+        } else {
+          (0, _jquery.default)('.page-header-height').removeClass('page-header-height-add');
+          (0, _jquery.default)('.page-header-height').addClass('basic');
+          (0, _jquery.default)('.etc-class').removeClass('acco-display');
+          (0, _jquery.default)(".etc-class-scope").removeClass("open-border");
+        }
+      },
+
+      onOpen(dropdown) {
+        Ember.set(this, 'open', true);
+
+        if (dropdown) {
+          Ember.set(this, 'dropdownApi', dropdown);
+        }
+      },
+
+      onClose() {
+        Ember.setProperties(this, {
+          activeClusterEntry: null,
+          clusterEntry: null,
+          dropdownApi: null,
+          hoverEntry: null,
+          open: false,
+          searchInput: ''
+        });
+        (0, _jquery.default)(document).off('mousemove', this.boundMouseMove);
+        (0, _jquery.default)('.project-menu').off('click', this.boundClickMenu);
+        (0, _jquery.default)('.project-menu').off('click', 'LI', this.boundClickItem);
+        (0, _jquery.default)('.clusters').off('mouseenter', 'LI', this.boundEnterCluster);
+        (0, _jquery.default)('.clusters, .projects').off('mouseenter', this.boundEnterScrollers);
+        (0, _jquery.default)('.clusters, .projects').off('mouseleave', this.boundLeaveScrollers);
       }
 
     },
@@ -29216,33 +29254,19 @@
     }),
 
     updateNavTree() {
-      const currentScope = Ember.get(this, "pageScope");
+      const currentScope = Ember.get(this, "pageScope"); // 하위 메뉴 있는 버튼 눌렀을 때 아코디언
 
-      if (currentScope == "global") {
-        (0, _jquery.default)(document).ready(function () {
-          (0, _jquery.default)("dt").off().click(function () {
-            if (!(0, _jquery.default)(this).hasClass("open")) {
-              (0, _jquery.default)(this).removeClass("open");
-              (0, _jquery.default)(this).toggleClass("open");
-              return false;
-            } else {
-              (0, _jquery.default)(this).removeClass("open");
-              return false;
-            }
-          });
+      (0, _jquery.default)(document).ready(function () {
+        (0, _jquery.default)(".etc-class-scope").on('click', function () {
+          if (!(0, _jquery.default)(this).hasClass('open')) {
+            (0, _jquery.default)(this).addClass('open');
+            (0, _jquery.default)(this).addClass("open-border");
+          } else if ((0, _jquery.default)(this).hasClass('open')) {
+            (0, _jquery.default)(this).removeClass('open');
+            (0, _jquery.default)(this).removeClass("open-border");
+          }
         });
-      } else {
-        (0, _jquery.default)(document).ready(function () {
-          (0, _jquery.default)("dt").click(function () {
-            (0, _jquery.default)(this).toggleClass("open");
-
-            if ((0, _jquery.default)("dt").not(this).hasClass("open")) {
-              (0, _jquery.default)("dt").not(this).removeClass("open");
-            }
-          });
-        });
-      }
-
+      });
       const out = (0, _navigationTree.get)().filter(item => {
         if (typeof Ember.get(item, "condition") === "function") {
           if (!item.condition.call(this)) {
@@ -30100,6 +30124,14 @@
     },
 
     actions: {
+      widthaddremoveClass() {
+        if ((0, _jquery.default)('.open-project-trigger-blue').is(':checked')) {
+          (0, _jquery.default)('.project-toggle').addClass('display-flex');
+        } else {
+          (0, _jquery.default)(".project-toggle").removeClass("display-flex");
+        }
+      },
+
       clickDashboard() {
         // Regular click on the link will have Ember try to resolve /dashboard/c/<id>
         // to an Ember route and show the error page.  That's bad.
@@ -30265,8 +30297,8 @@
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "Zf0ikEwS",
-    "block": "{\"symbols\":[\"dd\",\"project\"],\"statements\":[[10,\"nav\"],[14,0,\"clearfix responsive-nav\"],[14,\"role\",\"navigation\"],[14,1,\"js-responsive-height\"],[12],[2,\"\\n  \"],[10,\"ul\"],[14,0,\"nav-main nav-list no-inline-space\"],[12],[2,\"\\n\\n    \"],[1,[30,[36,11],null,[[\"pageScope\"],[[35,10]]]]],[2,\"\\n  \\n  \"],[10,\"div\"],[14,0,\"project_toggle\"],[12],[2,\"\\n\"],[6,[37,7],[[30,[36,12],[[35,10],\"global\"],null]],null,[[\"default\"],[{\"statements\":[[6,[37,7],[[35,2,[\"admin\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"        \"],[10,\"input\"],[14,0,\"open_project_red\"],[14,4,\"checkbox\"],[12],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"        \"],[10,\"input\"],[14,0,\"open_project\"],[14,4,\"checkbox\"],[12],[13],[2,\"\\n\"]],\"parameters\":[]}]]]],\"parameters\":[]}]]],[2,\"    \"],[10,\"div\"],[14,0,\"project_lists\"],[12],[2,\"\\n\"],[6,[37,15],[[30,[36,14],[[30,[36,14],[[35,13,[\"projects\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"li\"],[15,\"data-project-id\",[32,2,[\"id\"]]],[15,0,[31,[\"item clip project \",[30,[36,9],[[32,2,[\"isReady\"]],\"not-ready\"],null],\" \",[30,[36,7],[[32,2,[\"active\"]],\"active\",\"inactive\"],null],\" project_list\"]]],[12],[2,\"\\n\"],[6,[37,1],null,[[\"class\",\"route\",\"model\"],[\"top\",\"authenticated.project\",[32,2,[\"id\"]]]],[[\"default\"],[{\"statements\":[[2,\"            \"],[1,[32,2,[\"displayName\"]]],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"        \"],[13],[2,\"    \\n\"]],\"parameters\":[2]}]]],[2,\"    \"],[13],[2,\"\\n  \"],[13],[2,\"\\n  \"],[13],[2,\" \\n  \\n\"],[6,[37,16],null,[[\"tagName\",\"class\",\"horizontalPosition\",\"delay\"],[\"ul\",\"nav-user list-unstyled\",\"right\",250]],[[\"default\"],[{\"statements\":[[2,\"    \"],[10,\"li\"],[14,0,\"nav-item\"],[12],[2,\"\\n      \"],[8,[32,1,[\"Trigger\"]],[[24,0,\"btn\"],[16,\"ariaLabel\",[30,[36,0],[\"nav.user.label\"],[[\"username\"],[[35,5,[\"user\"]]]]]]],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n        \"],[10,\"a\"],[14,\"role\",\"button\"],[14,\"aria-haspopup\",\"true\"],[14,0,\"nav-link\"],[12],[2,\"\\n\"],[6,[37,7],[[35,6]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"            \"],[1,[30,[36,4],null,[[\"link\",\"identity\"],[false,[35,2,[\"principal\"]]]]]],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"gh-avatar-custom\"],[12],[2,\"\\n              \"],[10,\"div\"],[14,0,\"gh-placeholder\"],[12],[2,\"\\n                \"],[10,\"i\"],[14,0,\"icon icon-user\"],[12],[13],[2,\"\\n              \"],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"          \"],[10,\"span\"],[14,0,\"sr-only\"],[12],[2,\"\\n            \"],[1,[30,[36,0],[\"nav.srToggleDropdown\"],null]],[2,\"\\n          \"],[13],[2,\"\\n\"],[2,\"          \"],[10,\"span\"],[14,0,\"login-user\"],[12],[1,[35,2,[\"me\",\"username\"]]],[13],[2,\"\\n        \"],[13],[2,\"\\n      \"]],\"parameters\":[]}]]],[2,\"\\n    \"],[13],[2,\"\\n\\n    \"],[8,[32,1,[\"Content\"]],[[24,0,\"text-right\"]],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n\"],[6,[37,7],[[35,6]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"li\"],[14,\"role\",\"presentation\"],[14,0,\"user-auth\"],[12],[2,\"\\n          \"],[1,[30,[36,3],null,[[\"principal\"],[[35,2,[\"principal\"]]]]]],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"\\n      \"],[10,\"li\"],[14,\"role\",\"separator\"],[14,0,\"divider\"],[12],[13],[2,\"\\n      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"authenticated.apikeys\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.api.link\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n\"],[6,[37,7],[[35,2,[\"admin\"]]],null,[[\"default\"],[{\"statements\":[[2,\"      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"global-admin.security.cloud-credentials\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.admin.security.cloudCredentials\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"nodes.node-templates\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.nodeTemplates.link\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"authenticated.prefs\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.userPreferences.link\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n      \"],[10,\"li\"],[14,\"role\",\"separator\"],[14,0,\"divider\"],[12],[13],[2,\"\\n\\n\"],[6,[37,7],[[30,[36,8],[[32,0,[\"access\",\"principal\",\"provider\"]],\"local\"],null]],null,[[\"default\"],[{\"statements\":[[2,\"      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"class\",\"route\"],[\"user-logout\",\"logout\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.user.logout\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"    \"]],\"parameters\":[]}]]],[2,\"\\n\"]],\"parameters\":[1]}]]],[13]],\"hasEval\":false,\"upvars\":[\"t\",\"link-to\",\"access\",\"identity-block\",\"identity-avatar-custom\",\"session\",\"accessEnabled\",\"if\",\"eq\",\"unless\",\"pageScope\",\"page-header-projects\",\"not-eq\",\"cluster\",\"-track-array\",\"each\",\"hover-dropdown\"]}",
+    "id": "c/dNeDSX",
+    "block": "{\"symbols\":[\"dd\",\"project\",\"project\"],\"statements\":[[10,\"nav\"],[14,0,\"clearfix responsive-nav\"],[14,\"role\",\"navigation\"],[14,1,\"js-responsive-height\"],[12],[2,\"\\n  \"],[10,\"ul\"],[14,0,\"nav-main nav-list no-inline-space\"],[12],[2,\"\\n\\n    \"],[1,[30,[36,14],null,[[\"pageScope\"],[[35,13]]]]],[2,\"\\n  \\n  \"],[10,\"div\"],[14,0,\"project_toggle\"],[12],[2,\"\\n\"],[6,[37,7],[[30,[36,15],[[35,13],\"global\"],null]],null,[[\"default\"],[{\"statements\":[[6,[37,7],[[35,2,[\"admin\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"        \"],[10,\"input\"],[14,0,\"open_project_red\"],[14,4,\"checkbox\"],[12],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"project_lists\"],[12],[2,\"\\n\"],[6,[37,12],[[30,[36,11],[[30,[36,11],[[35,10,[\"projects\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"li\"],[15,\"data-project-id\",[32,3,[\"id\"]]],[15,0,[31,[\"item clip project \",[30,[36,9],[[32,3,[\"isReady\"]],\"not-ready\"],null],\" \",[30,[36,7],[[32,3,[\"active\"]],\"active\",\"inactive\"],null],\" project_list\"]]],[12],[2,\"\\n\"],[6,[37,1],null,[[\"class\",\"route\",\"model\"],[\"top\",\"authenticated.project\",[32,3,[\"id\"]]]],[[\"default\"],[{\"statements\":[[2,\"            \"],[1,[32,3,[\"displayName\"]]],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"        \"],[13],[2,\"    \\n\"]],\"parameters\":[3]}]]],[2,\"    \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"        \"],[10,\"input\"],[14,0,\"open_project\"],[14,4,\"checkbox\"],[12],[13],[2,\"\\n        \"],[10,\"div\"],[14,0,\"project_lists\"],[12],[2,\"\\n\"],[6,[37,12],[[30,[36,11],[[30,[36,11],[[35,10,[\"projects\"]]],null]],null]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"li\"],[15,\"data-project-id\",[32,2,[\"id\"]]],[15,0,[31,[\"item clip project \",[30,[36,9],[[32,2,[\"isReady\"]],\"not-ready\"],null],\" \",[30,[36,7],[[32,2,[\"active\"]],\"active\",\"inactive\"],null],\" project_list\"]]],[12],[2,\"\\n\"],[6,[37,1],null,[[\"class\",\"route\",\"model\"],[\"top\",\"authenticated.project\",[32,2,[\"id\"]]]],[[\"default\"],[{\"statements\":[[2,\"            \"],[1,[32,2,[\"displayName\"]]],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"        \"],[13],[2,\"    \\n\"]],\"parameters\":[2]}]]],[2,\"    \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]]],\"parameters\":[]}]]],[2,\"    \\n  \"],[13],[2,\"\\n  \"],[13],[2,\" \\n  \\n\"],[6,[37,16],null,[[\"tagName\",\"class\",\"horizontalPosition\",\"delay\"],[\"ul\",\"nav-user list-unstyled\",\"right\",250]],[[\"default\"],[{\"statements\":[[2,\"    \"],[10,\"li\"],[14,0,\"nav-item\"],[12],[2,\"\\n      \"],[8,[32,1,[\"Trigger\"]],[[24,0,\"btn\"],[16,\"ariaLabel\",[30,[36,0],[\"nav.user.label\"],[[\"username\"],[[35,5,[\"user\"]]]]]]],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n        \"],[10,\"a\"],[14,\"role\",\"button\"],[14,\"aria-haspopup\",\"true\"],[14,0,\"nav-link\"],[12],[2,\"\\n\"],[6,[37,7],[[35,6]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"            \"],[1,[30,[36,4],null,[[\"link\",\"identity\"],[false,[35,2,[\"principal\"]]]]]],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"            \"],[10,\"div\"],[14,0,\"gh-avatar-custom\"],[12],[2,\"\\n              \"],[10,\"div\"],[14,0,\"gh-placeholder\"],[12],[2,\"\\n                \"],[10,\"i\"],[14,0,\"icon icon-user\"],[12],[13],[2,\"\\n              \"],[13],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"          \"],[10,\"span\"],[14,0,\"sr-only\"],[12],[2,\"\\n            \"],[1,[30,[36,0],[\"nav.srToggleDropdown\"],null]],[2,\"\\n          \"],[13],[2,\"\\n\"],[2,\"          \"],[10,\"span\"],[14,0,\"login-user\"],[12],[1,[35,2,[\"me\",\"username\"]]],[13],[2,\"\\n        \"],[13],[2,\"\\n      \"]],\"parameters\":[]}]]],[2,\"\\n    \"],[13],[2,\"\\n\\n    \"],[8,[32,1,[\"Content\"]],[[24,0,\"text-right\"]],[[],[]],[[\"default\"],[{\"statements\":[[2,\"\\n\"],[6,[37,7],[[35,6]],null,[[\"default\"],[{\"statements\":[[2,\"        \"],[10,\"li\"],[14,\"role\",\"presentation\"],[14,0,\"user-auth\"],[12],[2,\"\\n          \"],[1,[30,[36,3],null,[[\"principal\"],[[35,2,[\"principal\"]]]]]],[2,\"\\n        \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"\\n      \"],[10,\"li\"],[14,\"role\",\"separator\"],[14,0,\"divider\"],[12],[13],[2,\"\\n      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"authenticated.apikeys\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.api.link\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n\"],[6,[37,7],[[35,2,[\"admin\"]]],null,[[\"default\"],[{\"statements\":[[2,\"      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"global-admin.security.cloud-credentials\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.admin.security.cloudCredentials\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"nodes.node-templates\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.nodeTemplates.link\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"route\"],[\"authenticated.prefs\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.userPreferences.link\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n      \"],[10,\"li\"],[14,\"role\",\"separator\"],[14,0,\"divider\"],[12],[13],[2,\"\\n\\n\"],[6,[37,7],[[30,[36,8],[[32,0,[\"access\",\"principal\",\"provider\"]],\"local\"],null]],null,[[\"default\"],[{\"statements\":[[2,\"      \"],[10,\"li\"],[12],[2,\"\\n\"],[6,[37,1],null,[[\"class\",\"route\"],[\"user-logout\",\"logout\"]],[[\"default\"],[{\"statements\":[[2,\"          \"],[10,\"span\"],[12],[1,[30,[36,0],[\"nav.user.logout\"],null]],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"      \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"    \"]],\"parameters\":[]}]]],[2,\"\\n\"]],\"parameters\":[1]}]]],[13]],\"hasEval\":false,\"upvars\":[\"t\",\"link-to\",\"access\",\"identity-block\",\"identity-avatar-custom\",\"session\",\"accessEnabled\",\"if\",\"eq\",\"unless\",\"cluster\",\"-track-array\",\"each\",\"pageScope\",\"page-header-projects\",\"not-eq\",\"hover-dropdown\"]}",
     "moduleName": "ui/components/page-header-width/template.hbs"
   });
 
@@ -37712,158 +37744,164 @@
   const rootNav = [// Project
   // Project / Global
   {
-    scope: "project",
-    id: "global-clusters",
-    localizedLabel: "nav.admin.clusters.tab",
-    route: "global-admin.clusters",
-    resource: ["cluster"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/clusters.png"
+    scope: 'project',
+    id: 'global-clusters',
+    localizedLabel: 'nav.admin.clusters.tab',
+    route: 'global-admin.clusters',
+    resource: ['cluster'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/clusters.png'
   }, {
-    scope: "project",
-    id: "global-accounts",
-    localizedLabel: "nav.admin.security.accounts",
-    route: "global-admin.security.accounts.users",
-    resource: ["user"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/users.png"
+    scope: 'project',
+    id: 'global-accounts',
+    localizedLabel: 'nav.admin.security.accounts',
+    route: 'global-admin.security.accounts.users',
+    resource: ['user'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/users.png'
   }, {
-    scope: "project",
-    id: "global-tools",
-    localizedLabel: "nav.tools.tab",
-    imagesrc: "/assets/images/etc.png",
+    scope: 'project',
+    id: 'global-tools',
+    localizedLabel: 'nav.tools.tab',
+    imagesrc: '/assets/images/etc.png',
     submenu: [{
-      scope: "project",
-      id: "nodes-node-drivers",
-      localizedLabel: "nav.admin.drivers",
-      route: "nodes.custom-drivers",
-      resource: ["nodedriver", "kontainerdriver"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/driver.png"
+      scope: 'project',
+      id: 'global-catalogs',
+      localizedLabel: 'nav.admin.catalogs',
+      route: 'global-admin.catalog',
+      resource: ['catalog'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/driver.png'
     }, {
-      scope: "project",
-      id: "global-group-accounts",
-      localizedLabel: "nav.admin.security.groupAccounts",
-      route: "global-admin.security.accounts.groups",
-      resource: ["globalrolebinding"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/group.png"
+      scope: 'project',
+      id: 'multi-cluster-apps',
+      localizedLabel: 'nav.admin.multiClusterApps',
+      route: 'global-admin.multi-cluster-apps',
+      resource: ['multiclusterapp'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/group.png'
     }, {
-      id: "global-security-roles",
-      localizedLabel: "nav.admin.security.roles",
-      route: "global-admin.security.roles.index",
-      resource: ["roletemplate"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/roles.png"
+      id: 'global-security-roles',
+      localizedLabel: 'nav.admin.security.roles',
+      route: 'global-admin.security.roles.index',
+      resource: ['roletemplate'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/roles.png'
     }, {
-      id: "global-security-roles",
-      localizedLabel: "nav.admin.security.podSecurityPolicies",
-      route: "global-admin.security.policies",
-      resource: ["podsecuritypolicytemplate"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/podpolicysecurity.png"
+      id: 'global-security-roles',
+      localizedLabel: 'nav.admin.security.podSecurityPolicies',
+      route: 'global-admin.security.policies',
+      resource: ['podsecuritypolicytemplate'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/podpolicysecurity.png'
     }, {
-      id: "global-security-authentication",
-      localizedLabel: "nav.admin.security.authentication",
-      route: "global-admin.security.authentication",
-      imagesrc: "/assets/images/authentication.png",
+      id: 'global-security-authentication',
+      localizedLabel: 'nav.admin.security.authentication',
+      route: 'global-admin.security.authentication',
+      imagesrc: '/assets/images/authentication.png',
 
       condition() {
-        const authConfigs = this.get("globalStore").all("authConfig");
-        return authConfigs.get("length") > 0;
+        const authConfigs = this.get('globalStore').all('authConfig');
+        return authConfigs.get('length') > 0;
       }
 
     }, {
-      scope: "project",
-      id: "global-settings",
-      localizedLabel: "nav.settings.tab",
-      route: "global-admin.settings.advanced",
-      resourceScope: "global",
-      imagesrc: "/assets/images/setting.png"
+      scope: 'project',
+      id: 'global-settings',
+      localizedLabel: 'nav.settings.tab',
+      route: 'global-admin.settings.advanced',
+      resourceScope: 'global',
+      imagesrc: '/assets/images/setting.png'
+    }, {
+      divider: true
+    }, {
+      id: 'tools-fleet',
+      localizedLabel: 'nav.tools.fleet',
+      dashboardBaseLink: '/c/local/fleet'
     }]
   }, // scope:project, 
   // Project / Cluster
   {
-    scope: "project",
-    id: "cluster-k8s",
-    localizedLabel: "nav.cluster.dashboard",
-    route: "authenticated.cluster.monitoring.index",
+    scope: 'project',
+    id: 'cluster-k8s',
+    localizedLabel: 'nav.cluster.dashboard',
+    route: 'authenticated.cluster.monitoring.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["node"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/clusters.png"
+    resource: ['node'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/clusters.png'
   }, {
-    scope: "project",
-    id: "cluster-nodes",
-    localizedLabel: "nav.cluster.nodes",
-    route: "authenticated.cluster.nodes",
+    scope: 'project',
+    id: 'cluster-nodes',
+    localizedLabel: 'nav.cluster.nodes',
+    route: 'authenticated.cluster.nodes',
     ctx: [_navigationTree.getClusterId],
-    resource: ["node"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/node.png"
+    resource: ['node'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/node.png'
   }, {
-    scope: "project",
-    id: "cluster-storage-volumes",
-    localizedLabel: "nav.cluster.storage.volumes",
-    route: "authenticated.cluster.storage.persistent-volumes.index",
+    scope: 'project',
+    id: 'cluster-storage-volumes',
+    localizedLabel: 'nav.cluster.storage.volumes',
+    route: 'authenticated.cluster.storage.persistent-volumes.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["project"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/persistent.png"
+    resource: ['project'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/persistent.png'
   }, {
-    scope: "project",
-    id: "cluster-storage-classes",
-    localizedLabel: "nav.cluster.storage.classes",
-    route: "authenticated.cluster.storage.classes.index",
+    scope: 'project',
+    id: 'cluster-storage-classes',
+    localizedLabel: 'nav.cluster.storage.classes',
+    route: 'authenticated.cluster.storage.classes.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["project"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/storage_class.png"
+    resource: ['project'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/storage_class.png'
   }, {
-    scope: "project",
-    id: "cluster-projects",
-    localizedLabel: "nav.cluster.projects",
-    route: "authenticated.cluster.projects.index",
+    scope: 'project',
+    id: 'cluster-projects',
+    localizedLabel: 'nav.cluster.projects',
+    route: 'authenticated.cluster.projects.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["project"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/projects.png"
+    resource: ['project'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/projects.png'
   }, {
-    scope: "project",
-    id: "cluster-security-roles",
-    localizedLabel: "nav.cluster.members",
-    route: "authenticated.cluster.security.members.index",
-    resource: ["clusterroletemplatebinding"],
-    resourceScope: "global",
+    scope: 'project',
+    id: 'cluster-security-roles',
+    localizedLabel: 'nav.cluster.members',
+    route: 'authenticated.cluster.security.members.index',
+    resource: ['clusterroletemplatebinding'],
+    resourceScope: 'global',
     ctx: [_navigationTree.getClusterId],
-    imagesrc: "/assets/images/member.png"
+    imagesrc: '/assets/images/member.png'
   }, {
-    scope: "project",
-    id: "cluster-tools",
-    localizedLabel: "nav.tools.tab",
+    scope: 'project',
+    id: 'cluster-tools',
+    localizedLabel: 'nav.tools.tab',
     ctx: [_navigationTree.getClusterId],
     resource: [],
-    resourceScope: "global",
-    imagesrc: "/assets/images/etc.png",
+    resourceScope: 'global',
+    imagesrc: '/assets/images/etc.png',
     submenu: [{
-      id: "cluster-tools-alert",
-      localizedLabel: "nav.tools.alerts",
-      route: "authenticated.cluster.alert",
-      resourceScope: "global",
+      id: 'cluster-tools-alert',
+      localizedLabel: 'nav.tools.alerts',
+      route: 'authenticated.cluster.alert',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/alert.png"
+      imagesrc: '/assets/images/alert.png'
     }, {
-      id: "cluster-tools-backups",
-      localizedLabel: "nav.tools.backups",
-      route: "authenticated.cluster.backups",
-      resourceScope: "global",
-      resource: ["etcdbackup"],
+      id: 'cluster-tools-backups',
+      localizedLabel: 'nav.tools.backups',
+      route: 'authenticated.cluster.backups',
+      resourceScope: 'global',
+      resource: ['etcdbackup'],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/snapshot.png",
+      imagesrc: '/assets/images/snapshot.png',
 
       condition() {
-        return Ember.get(this, "cluster.rancherKubernetesEngineConfig");
+        return Ember.get(this, 'cluster.rancherKubernetesEngineConfig');
       }
 
     }, {
@@ -37880,55 +37918,60 @@
       }
 
     }, {
-      id: "cluster-tools-notifiers",
-      localizedLabel: "nav.tools.notifiers",
-      route: "authenticated.cluster.notifier",
-      resourceScope: "global",
+      id: 'cluster-tools-notifiers',
+      localizedLabel: 'nav.tools.notifiers',
+      route: 'authenticated.cluster.notifier',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/notifier.png"
+      imagesrc: '/assets/images/notifier.png'
     }, {
-      id: "cluster-tools-logging",
-      localizedLabel: "nav.tools.logging",
-      route: "authenticated.cluster.logging",
-      resourceScope: "global",
+      id: 'cluster-tools-logging',
+      localizedLabel: 'nav.tools.logging',
+      route: 'authenticated.cluster.logging',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/logging.png"
+      imagesrc: '/assets/images/logging.png'
     }, {
-      id: "cluster-tools-monitoring",
-      localizedLabel: "nav.tools.monitoring",
-      route: "authenticated.cluster.monitoring.cluster-setting",
-      resourceScope: "global",
+      id: 'cluster-tools-monitoring',
+      localizedLabel: 'nav.tools.monitoring',
+      route: 'authenticated.cluster.monitoring.cluster-setting',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/monitoring.png"
+      imagesrc: '/assets/images/monitoring.png',
+
+      condition() {
+        return Ember.get(this, 'cluster.isActive');
+      }
+
     }]
   }, //Scope : Project, 
   // Project / Project
   {
-    scope: "project",
-    id: "infra",
-    localizedLabel: "nav.infra.tab",
+    scope: 'project',
+    id: 'infra',
+    localizedLabel: 'nav.infra.tab',
     ctx: [_navigationTree.getProjectId],
-    imagesrc: "/assets/images/resources.png",
+    imagesrc: '/assets/images/resources.png',
     submenu: [{
-      id: "containers",
-      localizedLabel: "nav.containers.tab",
-      route: "authenticated.project.index",
+      id: 'containers',
+      localizedLabel: 'nav.containers.tab',
+      route: 'authenticated.project.index',
       ctx: [_navigationTree.getProjectId],
-      resource: ["workload", "ingress", "service"],
-      resourceScope: "project",
-      imagesrc: "/assets/images/workloads.png",
-      currentWhen: ["containers", "workload", "ingresses", "authenticated.project.dns", "volumes"]
+      resource: ['workload', 'ingress', 'service'],
+      resourceScope: 'project',
+      imagesrc: '/assets/images/workloads.png',
+      currentWhen: ['containers', 'workload', 'ingresses', 'authenticated.project.dns', 'volumes']
     }, {
-      id: "hpa",
-      localizedLabel: "nav.infra.hpa",
-      route: "authenticated.project.hpa",
+      id: 'hpa',
+      localizedLabel: 'nav.infra.hpa',
+      route: 'authenticated.project.hpa',
       ctx: [_navigationTree.getProjectId],
-      resource: ["horizontalpodautoscaler"],
-      resourceScope: "project",
-      imagesrc: "/assets/images/autoscaling.png"
+      resource: ['horizontalpodautoscaler'],
+      resourceScope: 'project',
+      imagesrc: '/assets/images/autoscaling.png'
     }, {
       id: 'istio',
       localizedLabel: 'nav.tools.istio',
@@ -37939,70 +37982,70 @@
       currentWhen: ['authenticated.project.istio.project-istio'],
       imagesrc: '/assets/images/istio.png'
     }, {
-      id: "infra-secrets",
-      localizedLabel: "nav.infra.secrets",
-      route: "authenticated.project.secrets",
+      id: 'infra-secrets',
+      localizedLabel: 'nav.infra.secrets',
+      route: 'authenticated.project.secrets',
       ctx: [_navigationTree.getProjectId],
-      imagesrc: "/assets/images/secrets.png",
-      resource: ["namespacedsecret", "secret", "dockercredential", "certificate"],
-      resourceScope: "project",
-      currentWhen: ["authenticated.project.certificates", "authenticated.project.registries", "authenticated.project.secrets"]
+      resource: ['namespacedsecret', 'secret', 'dockercredential', 'certificate'],
+      resourceScope: 'project',
+      currentWhen: ['authenticated.project.certificates', 'authenticated.project.registries', 'authenticated.project.secrets'],
+      imagesrc: '/assets/images/secrets.png'
     }, {
-      id: "infra-config-maps",
-      localizedLabel: "nav.infra.configMaps",
-      route: "authenticated.project.config-maps",
+      id: 'infra-config-maps',
+      localizedLabel: 'nav.infra.configMaps',
+      route: 'authenticated.project.config-maps',
       ctx: [_navigationTree.getProjectId],
-      resource: ["configmap"],
-      resourceScope: "project",
-      imagesrc: "/assets/images/config.png"
+      resource: ['configmap'],
+      resourceScope: 'project',
+      imagesrc: '/assets/images/config.png'
     }]
   }, {
-    scope: "project",
-    id: "namespaces",
-    localizedLabel: "nav.project.namespaces",
-    route: "authenticated.project.ns.index",
+    scope: 'project',
+    id: 'namespaces',
+    localizedLabel: 'nav.project.namespaces',
+    route: 'authenticated.project.ns.index',
     ctx: [_navigationTree.getProjectId],
-    resource: ["namespace"],
-    resourceScope: "cluster",
-    imagesrc: "/assets/images/namespaces.png"
+    resource: ['namespace'],
+    resourceScope: 'cluster',
+    imagesrc: '/assets/images/namespaces.png'
   }, {
-    scope: "project",
-    id: "project-security-roles",
-    localizedLabel: "nav.infra.members",
-    route: "authenticated.project.security.members",
-    resource: ["projectroletemplatebinding"],
-    resourceScope: "global",
+    scope: 'project',
+    id: 'project-security-roles',
+    localizedLabel: 'nav.infra.members',
+    route: 'authenticated.project.security.members',
+    resource: ['projectroletemplatebinding'],
+    resourceScope: 'global',
     ctx: [_navigationTree.getProjectId],
-    imagesrc: "/assets/images/member.png"
+    imagesrc: '/assets/images/member.png'
   }, {
-    scope: "project",
-    id: "project-tools",
-    localizedLabel: "nav.tools.tab",
+    scope: 'project',
+    id: 'project-tools',
+    localizedLabel: 'nav.tools.tab',
     ctx: [_navigationTree.getProjectId],
     resource: [],
-    resourceScope: "global",
-    imagesrc: "/assets/images/etc.png",
+    resourceScope: 'global',
+    imagesrc: '/assets/images/etc.png',
     submenu: [{
-      id: "tools-alerts",
-      localizedLabel: "nav.tools.alerts",
-      route: "authenticated.project.alert",
+      id: 'tools-alerts',
+      localizedLabel: 'nav.tools.alerts',
+      route: 'authenticated.project.alert',
       resource: [],
       ctx: [_navigationTree.getProjectId],
-      resourceScope: "global",
+      resourceScope: 'global',
       imagesrc: "/assets/images/alert.png"
     }, {
-      id: "tools-logging",
-      localizedLabel: "nav.tools.logging",
-      route: "authenticated.project.logging",
-      resourceScope: "global",
+      id: 'tools-logging',
+      localizedLabel: 'nav.tools.logging',
+      route: 'authenticated.project.logging',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getProjectId],
       imagesrc: "/assets/images/logging.png"
     }, {
-      id: "tools-monitoring",
-      localizedLabel: "nav.tools.monitoring",
-      route: "authenticated.project.monitoring.project-setting",
-      resourceScope: "global",
+      id: 'tools-monitoring',
+      localizedLabel: 'nav.tools.monitoring',
+      route: 'authenticated.project.monitoring.project-setting',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getProjectId],
       imagesrc: "/assets/images/monitoring.png"
@@ -38010,184 +38053,190 @@
   }, // Scope Cluster, 
   // Cluster / Global
   {
-    scope: "cluster",
-    id: "global-clusters",
-    localizedLabel: "nav.admin.clusters.tab",
-    route: "global-admin.clusters",
-    resource: ["cluster"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/clusters.png"
+    scope: 'cluster',
+    id: 'global-clusters',
+    localizedLabel: 'nav.admin.clusters.tab',
+    route: 'global-admin.clusters',
+    resource: ['cluster'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/clusters.png'
   }, {
-    scope: "cluster",
-    id: "global-accounts",
-    localizedLabel: "nav.admin.security.accounts",
-    route: "global-admin.security.accounts.users",
-    resource: ["user"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/users.png"
+    scope: 'cluster',
+    id: 'global-accounts',
+    localizedLabel: 'nav.admin.security.accounts',
+    route: 'global-admin.security.accounts.users',
+    resource: ['user'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/users.png'
   }, {
-    scope: "cluster",
-    id: "global-tools",
-    localizedLabel: "nav.tools.tab",
-    imagesrc: "/assets/images/etc.png",
+    scope: 'cluster',
+    id: 'global-tools',
+    localizedLabel: 'nav.tools.tab',
+    imagesrc: '/assets/images/etc.png',
     submenu: [{
-      scope: "cluster",
-      id: "nodes-node-drivers",
-      localizedLabel: "nav.admin.drivers",
-      route: "nodes.custom-drivers",
-      resource: ["nodedriver", "kontainerdriver"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/driver.png"
+      scope: 'cluster',
+      id: 'nodes-node-drivers',
+      localizedLabel: 'nav.admin.drivers',
+      route: 'nodes.custom-drivers',
+      resource: ['nodedriver', 'kontainerdriver'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/driver.png'
     }, {
-      scope: "cluster",
-      id: "global-group-accounts",
-      localizedLabel: "nav.admin.security.groupAccounts",
-      route: "global-admin.security.accounts.groups",
-      resource: ["globalrolebinding"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/group.png"
+      scope: 'cluster',
+      id: 'global-group-accounts',
+      localizedLabel: 'nav.admin.security.groupAccounts',
+      route: 'global-admin.security.accounts.groups',
+      resource: ['globalrolebinding'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/group.png'
     }, {
-      id: "global-security-roles",
-      localizedLabel: "nav.admin.security.roles",
-      route: "global-admin.security.roles.index",
-      resource: ["roletemplate"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/roles.png"
+      id: 'global-security-roles',
+      localizedLabel: 'nav.admin.security.roles',
+      route: 'global-admin.security.roles.index',
+      resource: ['roletemplate'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/roles.png'
     }, {
-      id: "global-security-roles",
-      localizedLabel: "nav.admin.security.podSecurityPolicies",
-      route: "global-admin.security.policies",
-      resource: ["podsecuritypolicytemplate"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/podpolicysecurity.png"
+      id: 'global-security-roles',
+      localizedLabel: 'nav.admin.security.podSecurityPolicies',
+      route: 'global-admin.security.policies',
+      resource: ['podsecuritypolicytemplate'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/podpolicysecurity.png'
     }, {
-      id: "global-security-authentication",
-      localizedLabel: "nav.admin.security.authentication",
-      route: "global-admin.security.authentication",
-      imagesrc: "/assets/images/authentication.png",
+      id: 'global-security-authentication',
+      localizedLabel: 'nav.admin.security.authentication',
+      route: 'global-admin.security.authentication',
+      imagesrc: '/assets/images/authentication.png',
 
       condition() {
-        const authConfigs = this.get("globalStore").all("authConfig");
-        return authConfigs.get("length") > 0;
+        const authConfigs = this.get('globalStore').all('authConfig');
+        return authConfigs.get('length') > 0;
       }
 
     }, {
-      scope: "cluster",
-      id: "global-settings",
-      localizedLabel: "nav.settings.tab",
-      route: "global-admin.settings.advanced",
-      resourceScope: "global",
-      imagesrc: "/assets/images/setting.png"
+      scope: 'cluster',
+      id: 'global-settings',
+      localizedLabel: 'nav.settings.tab',
+      route: 'global-admin.settings.advanced',
+      resourceScope: 'global',
+      imagesrc: '/assets/images/setting.png'
+    }, {
+      divider: true
+    }, {
+      id: 'tools-fleet',
+      localizedLabel: 'nav.tools.fleet',
+      dashboardBaseLink: '/c/local/fleet'
     }]
   }, //scope:cluster, 
   // Cluster / Cluster
   {
-    scope: "cluster",
-    id: "cluster-k8s",
-    localizedLabel: "nav.cluster.dashboard",
-    route: "authenticated.cluster.monitoring.index",
+    scope: 'cluster',
+    id: 'cluster-k8s',
+    localizedLabel: 'nav.cluster.dashboard',
+    route: 'authenticated.cluster.monitoring.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["node"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/clusters.png"
+    resource: ['node'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/clusters.png'
   }, {
-    scope: "cluster",
-    id: "cluster-nodes",
-    localizedLabel: "nav.cluster.nodes",
-    route: "authenticated.cluster.nodes",
+    scope: 'cluster',
+    id: 'cluster-nodes',
+    localizedLabel: 'nav.cluster.nodes',
+    route: 'authenticated.cluster.nodes',
     ctx: [_navigationTree.getClusterId],
-    resource: ["node"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/node.png"
+    resource: ['node'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/node.png'
   }, {
-    scope: "cluster",
-    id: "cluster-storage-volumes",
-    localizedLabel: "nav.cluster.storage.volumes",
-    route: "authenticated.cluster.storage.persistent-volumes.index",
+    scope: 'cluster',
+    id: 'cluster-storage-volumes',
+    localizedLabel: 'nav.cluster.storage.volumes',
+    route: 'authenticated.cluster.storage.persistent-volumes.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["project"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/persistent.png"
+    resource: ['project'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/persistent.png'
   }, {
-    scope: "cluster",
-    id: "cluster-storage-classes",
-    localizedLabel: "nav.cluster.storage.classes",
-    route: "authenticated.cluster.storage.classes.index",
+    scope: 'cluster',
+    id: 'cluster-storage-classes',
+    localizedLabel: 'nav.cluster.storage.classes',
+    route: 'authenticated.cluster.storage.classes.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["project"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/storage_class.png"
+    resource: ['project'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/storage_class.png'
   }, {
-    scope: "cluster",
-    id: "cluster-projects",
-    localizedLabel: "nav.cluster.projects",
-    route: "authenticated.cluster.projects.index",
+    scope: 'cluster',
+    id: 'cluster-projects',
+    localizedLabel: 'nav.cluster.projects',
+    route: 'authenticated.cluster.projects.index',
     ctx: [_navigationTree.getClusterId],
-    resource: ["project"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/projects.png"
+    resource: ['project'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/projects.png'
   }, {
-    scope: "cluster",
-    id: "cluster-security-roles",
-    localizedLabel: "nav.cluster.members",
-    route: "authenticated.cluster.security.members.index",
-    resource: ["clusterroletemplatebinding"],
-    resourceScope: "global",
+    scope: 'cluster',
+    id: 'cluster-security-roles',
+    localizedLabel: 'nav.cluster.members',
+    route: 'authenticated.cluster.security.members.index',
+    resource: ['clusterroletemplatebinding'],
+    resourceScope: 'global',
     ctx: [_navigationTree.getClusterId],
-    imagesrc: "/assets/images/member.png"
+    imagesrc: '/assets/images/member.png'
   }, {
-    scope: "cluster",
-    id: "cluster-tools",
-    localizedLabel: "nav.tools.tab",
+    scope: 'cluster',
+    id: 'cluster-tools',
+    localizedLabel: 'nav.tools.tab',
     ctx: [_navigationTree.getClusterId],
     resource: [],
-    resourceScope: "global",
-    imagesrc: "/assets/images/etc.png",
+    resourceScope: 'global',
+    imagesrc: '/assets/images/etc.png',
     submenu: [{
-      id: "cluster-tools-alert",
-      localizedLabel: "nav.tools.alerts",
-      route: "authenticated.cluster.alert",
-      resourceScope: "global",
+      id: 'cluster-tools-alert',
+      localizedLabel: 'nav.tools.alerts',
+      route: 'authenticated.cluster.alert',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/alert.png"
+      imagesrc: '/assets/images/alert.png'
     }, {
-      id: "cluster-tools-backups",
-      localizedLabel: "nav.tools.backups",
-      route: "authenticated.cluster.backups",
-      resourceScope: "global",
-      resource: ["etcdbackup"],
+      id: 'cluster-tools-backups',
+      localizedLabel: 'nav.tools.backups',
+      route: 'authenticated.cluster.backups',
+      resourceScope: 'global',
+      resource: ['etcdbackup'],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/snapshot.png",
+      imagesrc: '/assets/images/snapshot.png',
 
       condition() {
-        return Ember.get(this, "cluster.rancherKubernetesEngineConfig");
+        return Ember.get(this, 'cluster.rancherKubernetesEngineConfig');
       }
 
     }, {
-      id: "cluster-tools-notifiers",
-      localizedLabel: "nav.tools.notifiers",
-      route: "authenticated.cluster.notifier",
-      resourceScope: "global",
+      id: 'cluster-tools-notifiers',
+      localizedLabel: 'nav.tools.notifiers',
+      route: 'authenticated.cluster.notifier',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/notifier.png"
+      imagesrc: '/assets/images/notifier.png'
     }, {
-      id: "cluster-tools-logging",
-      localizedLabel: "nav.tools.logging",
-      route: "authenticated.cluster.logging",
-      resourceScope: "global",
+      id: 'cluster-tools-logging',
+      localizedLabel: 'nav.tools.logging',
+      route: 'authenticated.cluster.logging',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/logging.png"
+      imagesrc: '/assets/images/logging.png'
     }, {
-      id: "cluster-tools-monitoring",
-      localizedLabel: "nav.tools.monitoring",
-      route: "authenticated.cluster.monitoring.cluster-setting",
-      resourceScope: "global",
+      id: 'cluster-tools-monitoring',
+      localizedLabel: 'nav.tools.monitoring',
+      route: 'authenticated.cluster.monitoring.cluster-setting',
+      resourceScope: 'global',
       resource: [],
       ctx: [_navigationTree.getClusterId],
-      imagesrc: "/assets/images/monitoring.png"
+      imagesrc: '/assets/images/monitoring.png'
     }, {
       id: 'cluster-tools-istio',
       localizedLabel: 'nav.tools.istio',
@@ -38202,76 +38251,82 @@
       }
 
     }]
-  }, // Global
+  }, // Global / Global
   {
-    scope: "global",
-    id: "global-clusters",
-    localizedLabel: "nav.admin.clusters.tab",
-    route: "global-admin.clusters",
-    resource: ["cluster"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/clusters.png"
+    scope: 'global',
+    id: 'global-clusters',
+    localizedLabel: 'nav.admin.clusters.tab',
+    route: 'global-admin.clusters',
+    resource: ['cluster'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/clusters.png'
   }, {
-    scope: "global",
-    id: "global-accounts",
-    localizedLabel: "nav.admin.security.accounts",
-    route: "global-admin.security.accounts.users",
-    resource: ["user"],
-    resourceScope: "global",
-    imagesrc: "/assets/images/users.png"
+    scope: 'global',
+    id: 'global-accounts',
+    localizedLabel: 'nav.admin.security.accounts',
+    route: 'global-admin.security.accounts.users',
+    resource: ['user'],
+    resourceScope: 'global',
+    imagesrc: '/assets/images/users.png'
   }, {
-    scope: "global",
-    id: "global-tools",
-    localizedLabel: "nav.tools.tab",
-    imagesrc: "/assets/images/etc.png",
+    scope: 'global',
+    id: 'global-tools',
+    localizedLabel: 'nav.tools.tab',
+    imagesrc: '/assets/images/etc.png',
     submenu: [{
-      scope: "global",
-      id: "nodes-node-drivers",
-      localizedLabel: "nav.admin.drivers",
-      route: "nodes.custom-drivers",
-      resource: ["nodedriver", "kontainerdriver"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/driver.png"
+      scope: 'global',
+      id: 'nodes-node-drivers',
+      localizedLabel: 'nav.admin.drivers',
+      route: 'nodes.custom-drivers',
+      resource: ['nodedriver', 'kontainerdriver'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/driver.png'
     }, {
-      scope: "global",
-      id: "global-group-accounts",
-      localizedLabel: "nav.admin.security.groupAccounts",
-      route: "global-admin.security.accounts.groups",
-      resource: ["globalrolebinding"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/group.png"
+      scope: 'global',
+      id: 'global-group-accounts',
+      localizedLabel: 'nav.admin.security.groupAccounts',
+      route: 'global-admin.security.accounts.groups',
+      resource: ['globalrolebinding'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/group.png'
     }, {
-      id: "global-security-roles",
-      localizedLabel: "nav.admin.security.roles",
-      route: "global-admin.security.roles.index",
-      resource: ["roletemplate"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/roles.png"
+      id: 'global-security-roles',
+      localizedLabel: 'nav.admin.security.roles',
+      route: 'global-admin.security.roles.index',
+      resource: ['roletemplate'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/roles.png'
     }, {
-      id: "global-security-roles",
-      localizedLabel: "nav.admin.security.podSecurityPolicies",
-      route: "global-admin.security.policies",
-      resource: ["podsecuritypolicytemplate"],
-      resourceScope: "global",
-      imagesrc: "/assets/images/podpolicysecurity.png"
+      id: 'global-security-roles',
+      localizedLabel: 'nav.admin.security.podSecurityPolicies',
+      route: 'global-admin.security.policies',
+      resource: ['podsecuritypolicytemplate'],
+      resourceScope: 'global',
+      imagesrc: '/assets/images/podpolicysecurity.png'
     }, {
-      id: "global-security-authentication",
-      localizedLabel: "nav.admin.security.authentication",
-      route: "global-admin.security.authentication",
-      imagesrc: "/assets/images/authentication.png",
+      id: 'global-security-authentication',
+      localizedLabel: 'nav.admin.security.authentication',
+      route: 'global-admin.security.authentication',
+      imagesrc: '/assets/images/authentication.png',
 
       condition() {
-        const authConfigs = this.get("globalStore").all("authConfig");
-        return authConfigs.get("length") > 0;
+        const authConfigs = this.get('globalStore').all('authConfig');
+        return authConfigs.get('length') > 0;
       }
 
     }, {
-      scope: "global",
-      id: "global-settings",
-      localizedLabel: "nav.settings.tab",
-      route: "global-admin.settings.advanced",
-      resourceScope: "global",
-      imagesrc: "/assets/images/setting.png"
+      scope: 'global',
+      id: 'global-settings',
+      localizedLabel: 'nav.settings.tab',
+      route: 'global-admin.settings.advanced',
+      resourceScope: 'global',
+      imagesrc: '/assets/images/setting.png'
+    }, {
+      divider: true
+    }, {
+      id: 'tools-fleet',
+      localizedLabel: 'nav.tools.fleet',
+      dashboardBaseLink: '/c/local/fleet'
     }]
   }];
 
@@ -38282,9 +38337,9 @@
   }
 
   var _default = {
-    name: "nav",
+    name: 'nav',
     initialize,
-    after: "store"
+    after: 'store'
   };
   _exports.default = _default;
 });
@@ -38465,7 +38520,8 @@
       if (Ember.get(this, 'app.environment') === 'development') {
         transition.send('logout');
       } else {
-        window.location.href = '/dashboard/auth/logout';
+        // window.location.href = '/dashboard/auth/logout';
+        transition.send('logout');
       }
     }
 
@@ -48499,9 +48555,7 @@ echo "Running custom user data script"
     this.route('authenticated', {
       path: '/'
     }, function () {
-      this.route('dashboard', {
-        path: '/dashboard/*path'
-      });
+      // this.route('dashboard', { path: '/dashboard/*path' });
       this.mount('nodes', {
         path: '/n',
         resetNamespace: true
@@ -49836,6 +49890,7 @@ echo "Running custom user data script"
 
           if (Ember.get(this, 'app.environment') === 'development') {
             link = 'https://localhost:8005/';
+            console.log("여기는 안들어오나");
           }
 
           window.location.href = link;
@@ -51451,8 +51506,8 @@ echo "Running custom user data script"
   _exports.default = void 0;
 
   var _default = Ember.HTMLBars.template({
-    "id": "vZrSMlFB",
-    "block": "{\"symbols\":[\"sortable\",\"kind\",\"obj\",\"dt\"],\"statements\":[[6,[37,12],null,[[\"showGroup\"],[false]],[[\"default\"],[{\"statements\":[[2,\"  \"],[11,\"button\"],[24,0,\"btn btn-sm bg-default mr-10\"],[16,\"disabled\",[30,[36,9],null,[[\"resource\",\"scope\",\"permission\"],[\"persistentvolumeclaim\",\"project\",\"create\"]]]],[24,4,\"button\"],[4,[38,10],[[32,0],\"importYaml\"],null],[12],[2,\"\\n    \"],[1,[30,[36,0],[\"nav.containers.importCompose\"],null]],[2,\"\\n  \"],[13],[2,\"\\n\"],[6,[37,11],null,[[\"class\",\"route\"],[\"btn btn-sm bg-primary\",\"volumes.new\"]],[[\"default\"],[{\"statements\":[[2,\"    \"],[1,[30,[36,0],[\"nav.containers.addVolume\"],null]],[2,\"\\n\"]],\"parameters\":[]}]]]],\"parameters\":[]}]]],[10,\"section\"],[14,0,\"pl-0 pr-0\"],[12],[2,\"\\n\"],[6,[37,20],null,[[\"classNames\",\"body\",\"searchText\",\"sortBy\",\"bulkActions\",\"subRows\",\"descending\",\"groupByKey\",\"groupByRef\",\"pagingLabel\",\"subHeaders\",\"subSearchField\",\"headers\"],[\"grid\",[35,19],[35,18],[35,17],true,true,[35,16],[35,15],\"namespace\",\"pagination.volume\",[35,14],\"instances\",[35,13]]],[[\"default\"],[{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"row\"],null]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"      \"],[10,\"tr\"],[14,0,\"main-row\"],[12],[2,\"\\n        \"],[10,\"td\"],[14,0,\"row-check\"],[14,\"valign\",\"middle\"],[14,5,\"padding-top: 2px;\"],[12],[2,\"\\n          \"],[1,[30,[36,6],null,[[\"nodeId\"],[[32,3,[\"id\"]]]]]],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"state\"]]]]],[12],[2,\"\\n          \"],[1,[30,[36,7],null,[[\"model\"],[[32,3]]]]],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"name\"]]]]],[12],[2,\"\\n          \"],[10,\"a\"],[15,6,[31,[[30,[36,5],[\" volumes.detail\",[32,3,[\"id\"]]],null]]]],[12],[2,\"\\n            \"],[1,[32,3,[\"displayName\"]]],[2,\"\\n          \"],[13],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"size\"]]]]],[12],[2,\"\\n          \"],[1,[32,3,[\"displaySize\"]]],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"volume\"]]]]],[12],[2,\"\\n\"],[6,[37,2],[[32,3,[\"persistentVolume\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"            \"],[10,\"a\"],[15,6,[31,[[30,[36,5],[\"authenticated.cluster.storage.persistent-volumes.detail\",[35,4,[\"currentCluster\",\"id\"]],[32,3,[\"persistentVolume\",\"id\"]]],null]]]],[12],[2,\"\\n              \"],[1,[32,3,[\"persistentVolume\",\"displayName\"]]],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"            \"],[10,\"span\"],[14,0,\"text-muted\"],[12],[2,\"\\n              –\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"storageClass\"]]]]],[12],[2,\"\\n\"],[6,[37,2],[[32,3,[\"storageClass\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"            \"],[10,\"a\"],[15,6,[31,[[30,[36,5],[\"authenticated.cluster.storage.classes.detail\",[35,4,[\"currentCluster\",\"id\"]],[32,3,[\"storageClass\",\"id\"]]],null]]]],[12],[2,\"\\n              \"],[1,[32,3,[\"storageClass\",\"displayName\"]]],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"            \"],[10,\"span\"],[14,0,\"text-muted\"],[12],[2,\"\\n              –\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"actions\"]]]]],[14,0,\"actions\"],[12],[2,\"\\n          \"],[1,[30,[36,8],null,[[\"model\"],[[32,3]]]]],[2,\"\\n        \"],[13],[2,\"\\n      \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"group\"],null]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"      \"],[1,[30,[36,3],null,[[\"model\",\"fullColspan\"],[[32,3,[\"ref\"]],[32,1,[\"fullColspan\"]]]]]],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"nomatch\"],null]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"      \"],[10,\"tr\"],[12],[2,\"\\n        \"],[10,\"td\"],[15,\"colspan\",[31,[[32,1,[\"fullColspan\"]]]]],[14,0,\"text-center text-muted lacsso pt-20 pb-20\"],[12],[2,\"\\n          \"],[1,[30,[36,0],[\"volumesPage.noMatch\"],null]],[2,\"\\n        \"],[13],[2,\"\\n      \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"norows\"],null]],null,[[\"default\"],[{\"statements\":[[2,\"      \"],[10,\"tr\"],[12],[2,\"\\n        \"],[10,\"td\"],[15,\"colspan\",[31,[[32,1,[\"fullColspan\"]]]]],[14,0,\"text-center text-muted lacsso pt-20 pb-20\"],[12],[2,\"\\n          \"],[1,[30,[36,0],[\"volumesPage.noData\"],null]],[2,\"\\n        \"],[13],[2,\"\\n      \"],[13],[2,\"\\n    \"]],\"parameters\":[]}]]]],\"parameters\":[]}]]]],\"parameters\":[]}]]]],\"parameters\":[]}]]]],\"parameters\":[1,2,3,4]}]]],[13],[2,\"\\n\"]],\"hasEval\":false,\"upvars\":[\"t\",\"eq\",\"if\",\"namespace-group\",\"scope\",\"href-to\",\"check-box\",\"badge-state\",\"action-menu\",\"rbac-prevents\",\"action\",\"link-to\",\"containers-header\",\"headers\",\"containerHeaders\",\"groupTableBy\",\"descending\",\"sortBy\",\"searchText\",\"rows\",\"sortable-table\"]}",
+    "id": "hzeubiQz",
+    "block": "{\"symbols\":[\"sortable\",\"kind\",\"obj\",\"dt\"],\"statements\":[[6,[37,12],null,[[\"showGroup\"],[false]],[[\"default\"],[{\"statements\":[[2,\"  \"],[11,\"button\"],[24,0,\"btn btn-sm bg-default mr-10\"],[16,\"disabled\",[30,[36,9],null,[[\"resource\",\"scope\",\"permission\"],[\"persistentvolumeclaim\",\"project\",\"create\"]]]],[24,4,\"button\"],[4,[38,10],[[32,0],\"importYaml\"],null],[12],[2,\"\\n    \"],[1,[30,[36,0],[\"nav.containers.importCompose\"],null]],[2,\"\\n  \"],[13],[2,\"\\n\"],[6,[37,11],null,[[\"class\",\"route\"],[\"btn btn-sm bg-primary\",\"volumes.new\"]],[[\"default\"],[{\"statements\":[[2,\"    \"],[1,[30,[36,0],[\"nav.containers.addVolume\"],null]],[2,\"\\n\"]],\"parameters\":[]}]]]],\"parameters\":[]}]]],[10,\"section\"],[14,0,\"pl-0 pr-0\"],[12],[2,\"\\n\"],[6,[37,20],null,[[\"classNames\",\"body\",\"searchText\",\"sortBy\",\"bulkActions\",\"subRows\",\"descending\",\"groupByKey\",\"groupByRef\",\"pagingLabel\",\"subHeaders\",\"subSearchField\",\"headers\"],[\"grid\",[35,19],[35,18],[35,17],true,true,[35,16],[35,15],\"namespace\",\"pagination.volume\",[35,14],\"instances\",[35,13]]],[[\"default\"],[{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"row\"],null]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"      \"],[10,\"tr\"],[14,0,\"main-row\"],[12],[2,\"\\n        \"],[10,\"td\"],[14,0,\"row-check\"],[14,\"valign\",\"middle\"],[14,5,\"padding-top: 2px;\"],[12],[2,\"\\n          \"],[1,[30,[36,6],null,[[\"nodeId\"],[[32,3,[\"id\"]]]]]],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"state\"]]]]],[12],[2,\"\\n          \"],[1,[30,[36,7],null,[[\"model\"],[[32,3]]]]],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"name\"]]]]],[12],[2,\"\\n          \"],[10,\"a\"],[15,6,[31,[[30,[36,5],[\"volumes.detail\",[32,3,[\"id\"]]],null]]]],[12],[2,\"\\n            \"],[1,[32,3,[\"displayName\"]]],[2,\"\\n          \"],[13],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"size\"]]]]],[12],[2,\"\\n          \"],[1,[32,3,[\"displaySize\"]]],[2,\"\\n        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"volume\"]]]]],[12],[2,\"\\n\"],[6,[37,2],[[32,3,[\"persistentVolume\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"            \"],[10,\"a\"],[15,6,[31,[[30,[36,5],[\"authenticated.cluster.storage.persistent-volumes.detail\",[35,4,[\"currentCluster\",\"id\"]],[32,3,[\"persistentVolume\",\"id\"]]],null]]]],[12],[2,\"\\n              \"],[1,[32,3,[\"persistentVolume\",\"displayName\"]]],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"            \"],[10,\"span\"],[14,0,\"text-muted\"],[12],[2,\"\\n              –\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"storageClass\"]]]]],[12],[2,\"\\n\"],[6,[37,2],[[32,3,[\"storageClass\"]]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"            \"],[10,\"a\"],[15,6,[31,[[30,[36,5],[\"authenticated.cluster.storage.classes.detail\",[35,4,[\"currentCluster\",\"id\"]],[32,3,[\"storageClass\",\"id\"]]],null]]]],[12],[2,\"\\n              \"],[1,[32,3,[\"storageClass\",\"displayName\"]]],[2,\"\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[2,\"            \"],[10,\"span\"],[14,0,\"text-muted\"],[12],[2,\"\\n              –\\n            \"],[13],[2,\"\\n\"]],\"parameters\":[]}]]],[2,\"        \"],[13],[2,\"\\n        \"],[10,\"td\"],[15,\"data-title\",[31,[[32,4,[\"actions\"]]]]],[14,0,\"actions\"],[12],[2,\"\\n          \"],[1,[30,[36,8],null,[[\"model\"],[[32,3]]]]],[2,\"\\n        \"],[13],[2,\"\\n      \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"group\"],null]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"      \"],[1,[30,[36,3],null,[[\"model\",\"fullColspan\"],[[32,3,[\"ref\"]],[32,1,[\"fullColspan\"]]]]]],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"nomatch\"],null]],null,[[\"default\",\"else\"],[{\"statements\":[[2,\"      \"],[10,\"tr\"],[12],[2,\"\\n        \"],[10,\"td\"],[15,\"colspan\",[31,[[32,1,[\"fullColspan\"]]]]],[14,0,\"text-center text-muted lacsso pt-20 pb-20\"],[12],[2,\"\\n          \"],[1,[30,[36,0],[\"volumesPage.noMatch\"],null]],[2,\"\\n        \"],[13],[2,\"\\n      \"],[13],[2,\"\\n\"]],\"parameters\":[]},{\"statements\":[[6,[37,2],[[30,[36,1],[[32,2],\"norows\"],null]],null,[[\"default\"],[{\"statements\":[[2,\"      \"],[10,\"tr\"],[12],[2,\"\\n        \"],[10,\"td\"],[15,\"colspan\",[31,[[32,1,[\"fullColspan\"]]]]],[14,0,\"text-center text-muted lacsso pt-20 pb-20\"],[12],[2,\"\\n          \"],[1,[30,[36,0],[\"volumesPage.noData\"],null]],[2,\"\\n        \"],[13],[2,\"\\n      \"],[13],[2,\"\\n    \"]],\"parameters\":[]}]]]],\"parameters\":[]}]]]],\"parameters\":[]}]]]],\"parameters\":[]}]]]],\"parameters\":[1,2,3,4]}]]],[13],[2,\"\\n\"]],\"hasEval\":false,\"upvars\":[\"t\",\"eq\",\"if\",\"namespace-group\",\"scope\",\"href-to\",\"check-box\",\"badge-state\",\"action-menu\",\"rbac-prevents\",\"action\",\"link-to\",\"containers-header\",\"headers\",\"containerHeaders\",\"groupTableBy\",\"descending\",\"sortBy\",\"searchText\",\"rows\",\"sortable-table\"]}",
     "moduleName": "ui/volumes/index/template.hbs"
   });
 
