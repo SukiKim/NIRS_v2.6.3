@@ -29078,7 +29078,7 @@
 
   _exports.default = _default;
 });
-;define("ui/components/page-header-height/component", ["exports", "ui/components/page-header-height/template", "shared/utils/constants", "shared/utils/navigation-tree", "jquery", "ui/authenticated/cluster/storage/classes/index/controller"], function (_exports, _template, _constants, _navigationTree, _jquery, _controller) {
+;define("ui/components/page-header-height/component", ["exports", "ui/components/page-header-height/template", "shared/utils/constants", "shared/utils/navigation-tree", "jquery"], function (_exports, _template, _constants, _navigationTree, _jquery) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -29171,45 +29171,6 @@
     actions: {
       clickDashboard() {
         window.location.href = Ember.get(this, "dashboardLink");
-      },
-
-      addremoveClass() {
-        if ((0, _jquery.default)('.nav-toggle').is(':checked')) {
-          // nav-toggle 눌렀을 때 크기 및 위치 변경
-          (0, _jquery.default)('.page-header-height').addClass('page-header-height-add');
-          (0, _jquery.default)('.page-header-height').removeClass('basic');
-          (0, _jquery.default)('.etc-class').addClass('acco-display');
-        } else {
-          (0, _jquery.default)('.page-header-height').removeClass('page-header-height-add');
-          (0, _jquery.default)('.page-header-height').addClass('basic');
-          (0, _jquery.default)('.etc-class').removeClass('acco-display');
-          (0, _jquery.default)(".etc-class-scope").removeClass("open-border");
-        }
-      },
-
-      onOpen(dropdown) {
-        Ember.set(this, 'open', true);
-
-        if (dropdown) {
-          Ember.set(this, 'dropdownApi', dropdown);
-        }
-      },
-
-      onClose() {
-        Ember.setProperties(this, {
-          activeClusterEntry: null,
-          clusterEntry: null,
-          dropdownApi: null,
-          hoverEntry: null,
-          open: false,
-          searchInput: ''
-        });
-        (0, _jquery.default)(document).off('mousemove', this.boundMouseMove);
-        (0, _jquery.default)('.project-menu').off('click', this.boundClickMenu);
-        (0, _jquery.default)('.project-menu').off('click', 'LI', this.boundClickItem);
-        (0, _jquery.default)('.clusters').off('mouseenter', 'LI', this.boundEnterCluster);
-        (0, _jquery.default)('.clusters, .projects').off('mouseenter', this.boundEnterScrollers);
-        (0, _jquery.default)('.clusters, .projects').off('mouseleave', this.boundLeaveScrollers);
       }
 
     },
@@ -29254,19 +29215,33 @@
     }),
 
     updateNavTree() {
-      const currentScope = Ember.get(this, "pageScope"); // 하위 메뉴 있는 버튼 눌렀을 때 아코디언
+      const currentScope = Ember.get(this, "pageScope");
 
-      (0, _jquery.default)(document).ready(function () {
-        (0, _jquery.default)(".etc-class-scope").on('click', function () {
-          if (!(0, _jquery.default)(this).hasClass('open')) {
-            (0, _jquery.default)(this).addClass('open');
-            (0, _jquery.default)(this).addClass("open-border");
-          } else if ((0, _jquery.default)(this).hasClass('open')) {
-            (0, _jquery.default)(this).removeClass('open');
-            (0, _jquery.default)(this).removeClass("open-border");
-          }
+      if (currentScope == "global") {
+        (0, _jquery.default)(document).ready(function () {
+          (0, _jquery.default)("dt").off().click(function () {
+            if (!(0, _jquery.default)(this).hasClass("open")) {
+              (0, _jquery.default)(this).removeClass("open");
+              (0, _jquery.default)(this).toggleClass("open");
+              return false;
+            } else {
+              (0, _jquery.default)(this).removeClass("open");
+              return false;
+            }
+          });
         });
-      });
+      } else {
+        (0, _jquery.default)(document).ready(function () {
+          (0, _jquery.default)("dt").click(function () {
+            (0, _jquery.default)(this).toggleClass("open");
+
+            if ((0, _jquery.default)("dt").not(this).hasClass("open")) {
+              (0, _jquery.default)("dt").not(this).removeClass("open");
+            }
+          });
+        });
+      }
+
       const out = (0, _navigationTree.get)().filter(item => {
         if (typeof Ember.get(item, "condition") === "function") {
           if (!item.condition.call(this)) {
@@ -30124,14 +30099,6 @@
     },
 
     actions: {
-      widthaddremoveClass() {
-        if ((0, _jquery.default)('.open-project-trigger-blue').is(':checked')) {
-          (0, _jquery.default)('.project-toggle').addClass('display-flex');
-        } else {
-          (0, _jquery.default)(".project-toggle").removeClass("display-flex");
-        }
-      },
-
       clickDashboard() {
         // Regular click on the link will have Ember try to resolve /dashboard/c/<id>
         // to an Ember route and show the error page.  That's bad.
@@ -51782,7 +51749,7 @@ echo "Running custom user data script"
 ;define('ui/config/environment', [], function() {
   
           var exports = {
-            'default': {"modulePrefix":"ui","environment":"development","exportApplicationGlobal":true,"locationType":"auto","EmberENV":{"FEATURES":{},"EXTEND_PROTOTYPES":{"Date":false},"_APPLICATION_TEMPLATE_WRAPPER":false,"_DEFAULT_ASYNC_OBSERVERS":true,"_JQUERY_INTEGRATION":true,"_TEMPLATE_ONLY_GLIMMER_COMPONENTS":false},"minifyCSS":{"enabled":false},"minifyJS":{"enabled":false},"contentSecurityPolicy":{"style-src":"'self' releases.rancher.com localhost:8000 'unsafe-inline'","font-src":"'self' releases.rancher.com","script-src":"'self' releases.rancher.com localhost:8000","object-src":"'self' releases.rancher.com","img-src":"'self' releases.rancher.com avatars.githubusercontent.com gravatar.com localhost:8000 data:","frame-src":"'self' releases.rancher.com","connect-src":"*","unsafe-eval":"'self' releases.rancher.com"},"APP":{"version":"master-dev","appName":"Rancher","environment":"development","baseAssets":"/","clusterToken":"%CLUSTERID%","projectToken":"%PROJECTID%","apiServer":"","apiEndpoint":"/v3","publicApiEndpoint":"/v3-public","clusterEndpoint":"/v3/clusters/%CLUSTERID%","projectEndpoint":"/v3/projects/%PROJECTID%","proxyEndpoint":"/meta/proxy","globalSubscribeEndpoint":"/v3/subscribe","clusterSubscribeEndpoint":"/v3/clusters/%CLUSTERID%/subscribe","projectSubscribeEndpoint":"/v3/projects/%PROJECTID%/subscribe","magicEndpoint":"/r","telemetryEndpoint":"/v1-telemetry","kubernetesBase":"/k8s","kubectlEndpoint":"/r/projects/%PROJECTID%/kubectld:8091/v1-kubectl","kubernetesDashboard":"/k8s/clusters/%CLUSTERID%/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/","needIntlPolyfill":false,"locales":{"ar-sa":"الإنجليزية","de-de":"Deutsch","en-us":"English","es-es":"Español","fa-ir":"فارسی","fr-fr":"Française","hu-hu":"Magyar","it-it":"Italiano","ja-jp":"日本語","km-kh":"ភាសាខ្មែរ","ko-kr":"영어","nb-no":"Norsk","nl-nl":"Nederlands","none":"None","pt-br":"Português","ru-ru":"Русский","sh-hr":"Srpskohrvatski","sv-se":"Svenska","tr-tr":"İngilizce","uk-ua":"Українська","vi-vn":"Tiếng Việt","zh-hans":"简体中文","zh-hant-tw":"繁體中文(台灣)","zh-hant":"繁體中文"},"stripe":{"publishableKey":"pk_test_g925RcuVORh2KgHWfFbE80by"},"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"pl":"rancher","name":"ui"}}
+            'default': {"modulePrefix":"ui","environment":"development","exportApplicationGlobal":true,"locationType":"auto","EmberENV":{"FEATURES":{},"EXTEND_PROTOTYPES":{"Date":false},"_APPLICATION_TEMPLATE_WRAPPER":false,"_DEFAULT_ASYNC_OBSERVERS":true,"_JQUERY_INTEGRATION":true,"_TEMPLATE_ONLY_GLIMMER_COMPONENTS":false},"minifyCSS":{"enabled":false},"minifyJS":{"enabled":false},"contentSecurityPolicy":{"style-src":"'self' releases.rancher.com localhost:8000 'unsafe-inline'","font-src":"'self' releases.rancher.com","script-src":"'self' releases.rancher.com localhost:8000","object-src":"'self' releases.rancher.com","img-src":"'self' releases.rancher.com avatars.githubusercontent.com gravatar.com localhost:8000 data:","frame-src":"'self' releases.rancher.com","connect-src":"*","unsafe-eval":"'self' releases.rancher.com"},"APP":{"version":"master-dev","appName":"eGovCP Rancher","environment":"development","baseAssets":"/","clusterToken":"%CLUSTERID%","projectToken":"%PROJECTID%","apiServer":"","apiEndpoint":"/v3","publicApiEndpoint":"/v3-public","clusterEndpoint":"/v3/clusters/%CLUSTERID%","projectEndpoint":"/v3/projects/%PROJECTID%","proxyEndpoint":"/meta/proxy","globalSubscribeEndpoint":"/v3/subscribe","clusterSubscribeEndpoint":"/v3/clusters/%CLUSTERID%/subscribe","projectSubscribeEndpoint":"/v3/projects/%PROJECTID%/subscribe","magicEndpoint":"/r","telemetryEndpoint":"/v1-telemetry","kubernetesBase":"/k8s","kubectlEndpoint":"/r/projects/%PROJECTID%/kubectld:8091/v1-kubectl","kubernetesDashboard":"/k8s/clusters/%CLUSTERID%/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/","needIntlPolyfill":false,"locales":{"ar-sa":"الإنجليزية","de-de":"Deutsch","en-us":"English","es-es":"Español","fa-ir":"فارسی","fr-fr":"Française","hu-hu":"Magyar","it-it":"Italiano","ja-jp":"日本語","km-kh":"ភាសាខ្មែរ","ko-kr":"영어","nb-no":"Norsk","nl-nl":"Nederlands","none":"None","pt-br":"Português","ru-ru":"Русский","sh-hr":"Srpskohrvatski","sv-se":"Svenska","tr-tr":"İngilizce","uk-ua":"Українська","vi-vn":"Tiếng Việt","zh-hans":"简体中文","zh-hant-tw":"繁體中文(台灣)","zh-hant":"繁體中文"},"stripe":{"publishableKey":"pk_test_g925RcuVORh2KgHWfFbE80by"},"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"pl":"rancher","name":"ui"}}
           };
           Object.defineProperty(exports, '__esModule', {value: true});
           return exports;
@@ -51791,7 +51758,7 @@ echo "Running custom user data script"
 
 ;
           if (!runningTests) {
-            require("ui/app")["default"].create({"version":"master-dev","appName":"Rancher","environment":"development","baseAssets":"/","clusterToken":"%CLUSTERID%","projectToken":"%PROJECTID%","apiServer":"","apiEndpoint":"/v3","publicApiEndpoint":"/v3-public","clusterEndpoint":"/v3/clusters/%CLUSTERID%","projectEndpoint":"/v3/projects/%PROJECTID%","proxyEndpoint":"/meta/proxy","globalSubscribeEndpoint":"/v3/subscribe","clusterSubscribeEndpoint":"/v3/clusters/%CLUSTERID%/subscribe","projectSubscribeEndpoint":"/v3/projects/%PROJECTID%/subscribe","magicEndpoint":"/r","telemetryEndpoint":"/v1-telemetry","kubernetesBase":"/k8s","kubectlEndpoint":"/r/projects/%PROJECTID%/kubectld:8091/v1-kubectl","kubernetesDashboard":"/k8s/clusters/%CLUSTERID%/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/","needIntlPolyfill":false,"locales":{"ar-sa":"الإنجليزية","de-de":"Deutsch","en-us":"English","es-es":"Español","fa-ir":"فارسی","fr-fr":"Française","hu-hu":"Magyar","it-it":"Italiano","ja-jp":"日本語","km-kh":"ភាសាខ្មែរ","ko-kr":"영어","nb-no":"Norsk","nl-nl":"Nederlands","none":"None","pt-br":"Português","ru-ru":"Русский","sh-hr":"Srpskohrvatski","sv-se":"Svenska","tr-tr":"İngilizce","uk-ua":"Українська","vi-vn":"Tiếng Việt","zh-hans":"简体中文","zh-hant-tw":"繁體中文(台灣)","zh-hant":"繁體中文"},"stripe":{"publishableKey":"pk_test_g925RcuVORh2KgHWfFbE80by"},"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"pl":"rancher","name":"ui"});
+            require("ui/app")["default"].create({"version":"master-dev","appName":"eGovCP Rancher","environment":"development","baseAssets":"/","clusterToken":"%CLUSTERID%","projectToken":"%PROJECTID%","apiServer":"","apiEndpoint":"/v3","publicApiEndpoint":"/v3-public","clusterEndpoint":"/v3/clusters/%CLUSTERID%","projectEndpoint":"/v3/projects/%PROJECTID%","proxyEndpoint":"/meta/proxy","globalSubscribeEndpoint":"/v3/subscribe","clusterSubscribeEndpoint":"/v3/clusters/%CLUSTERID%/subscribe","projectSubscribeEndpoint":"/v3/projects/%PROJECTID%/subscribe","magicEndpoint":"/r","telemetryEndpoint":"/v1-telemetry","kubernetesBase":"/k8s","kubectlEndpoint":"/r/projects/%PROJECTID%/kubectld:8091/v1-kubectl","kubernetesDashboard":"/k8s/clusters/%CLUSTERID%/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy/","needIntlPolyfill":false,"locales":{"ar-sa":"الإنجليزية","de-de":"Deutsch","en-us":"English","es-es":"Español","fa-ir":"فارسی","fr-fr":"Française","hu-hu":"Magyar","it-it":"Italiano","ja-jp":"日本語","km-kh":"ភាសាខ្មែរ","ko-kr":"영어","nb-no":"Norsk","nl-nl":"Nederlands","none":"None","pt-br":"Português","ru-ru":"Русский","sh-hr":"Srpskohrvatski","sv-se":"Svenska","tr-tr":"İngilizce","uk-ua":"Українська","vi-vn":"Tiếng Việt","zh-hans":"简体中文","zh-hant-tw":"繁體中文(台灣)","zh-hant":"繁體中文"},"stripe":{"publishableKey":"pk_test_g925RcuVORh2KgHWfFbE80by"},"LOG_TRANSITIONS":true,"LOG_TRANSITIONS_INTERNAL":true,"LOG_VIEW_LOOKUPS":true,"pl":"rancher","name":"ui"});
           }
         
 //# sourceMappingURL=ui.map
